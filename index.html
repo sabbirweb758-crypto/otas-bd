@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Al Ihda Collection | Premium Online Shop</title>
+<meta name="description" content="Al Ihda Collection — Women's Fashion, Men's Fashion, Attar, Perfume and Dry Foods.">
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
+
+:root {
+  --green:#064737;
+  --dark:#032d25;
+  --gold:#d6ad64;
+  --cream:#faf7ef;
+  --ink:#24372f;
+}
+* { box-sizing:border-box; margin:0; padding:0; }
+html { scroll-behavior:smooth; scroll-padding-top:85px; }
+body { font-family:'Hind Siliguri',sans-serif; color:var(--ink); background:#fff; }
+button,input { font:inherit; }
+button { cursor:pointer; }
+a { text-decoration:none; color:inherit; }
+img { display:block; width:100%; object-fit:cover; }
+.container { width:min(1200px,92%); margin:auto; }
+
+header {
+  background:var(--dark); color:white; position:sticky; top:0;
+  z-index:20; border-bottom:1px solid #d6ad6455;
+}
+.nav { min-height:76px; display:flex; align-items:center; justify-content:space-between; gap:15px; }
+.brand { display:flex; align-items:center; gap:11px; }
+.brand-mark { color:var(--gold); font:700 40px 'Playfair Display',serif; }
+.brand-name { font:700 21px 'Playfair Display',serif; }
+.brand small { color:#e8d4aa; font-size:11px; }
+nav { display:flex; align-items:center; gap:17px; }
+nav a { font-size:13px; }
+nav a:hover { color:var(--gold); }
+.nav-right { display:flex; align-items:center; gap:10px; }
+.nav-button { border:0; background:transparent; color:white; font-size:23px; padding:5px; }
+.count { background:var(--gold); color:#15382b; border-radius:20px; padding:1px 7px; font-size:12px; }
+.menu-button { display:none; }
+
+.hero {
+  min-height:510px;
+  display:flex; align-items:center;
+  background:
+   linear-gradient(90deg,#fbf6e9 0%,#fbf6e9ee 35%,#fbf6e970 63%,#00000008),
+   url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1800&q=85') center/cover;
+}
+.hero-content { padding:75px 0; max-width:620px; }
+.eyebrow { color:#9c7532; font-weight:600; letter-spacing:2px; }
+.hero h1 { font:700 clamp(40px,5.6vw,72px)/1.13 'Playfair Display',serif; color:var(--green); margin:12px 0; }
+.hero h1 span { color:#bb8734; }
+.hero h2 { font-size:22px; margin-bottom:13px; }
+.hero p { max-width:500px; color:#59675d; margin-bottom:24px; }
+.btn { display:inline-block; border:0; border-radius:30px; padding:11px 22px; background:var(--green); color:white; }
+.btn:hover { background:#087357; }
+.btn-gold { background:var(--gold); color:#183a2d; }
+.hero .btn { margin:4px 5px 4px 0; }
+
+.section { padding:62px 0; }
+.section-title { text-align:center; margin-bottom:30px; }
+.section-title h2 { color:var(--green); font-size:30px; }
+.section-title p { color:#718077; margin-top:5px; }
+.section-title:after { content:""; display:block; width:65px; height:3px; background:var(--gold); margin:12px auto 0; }
+
+.category-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:18px; }
+.category-card { border:1px solid #e6e9df; border-radius:14px; overflow:hidden; background:white; transition:.2s; }
+.category-card:hover { transform:translateY(-4px); box-shadow:0 10px 25px #173a2015; }
+.category-card img { height:165px; }
+.category-info { text-align:center; padding:17px 10px 20px; }
+.category-info h3 { color:var(--green); font-size:19px; }
+.category-info p { color:#748076; font-size:13px; margin:6px 0 13px; }
+
+.shop-section { background:#f7f8f3; }
+.shop-category { margin-bottom:47px; scroll-margin-top:90px; }
+.shop-heading { display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:18px; }
+.shop-heading h3 { font-size:24px; color:var(--green); }
+.shop-heading span { color:#7a857c; font-size:13px; }
+.product-grid { display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:15px; }
+.product-card { border:1px solid #e6e9e2; border-radius:12px; overflow:hidden; background:white; min-width:0; }
+.product-card img { height:160px; background:#f1eee5; }
+.product-info { padding:12px; }
+.product-info h4 { font-size:16px; color:#203b30; }
+.product-info p { font-size:12px; color:#788178; min-height:36px; margin:5px 0; }
+.product-price { font-size:14px; font-weight:700; color:var(--green); margin:8px 0; }
+.add-btn { width:100%; background:var(--green); color:white; border:0; border-radius:7px; padding:9px 5px; font-size:13px; }
+.add-btn:hover { background:#087357; }
+.search { display:block; width:min(500px,100%); margin:0 auto 35px; border:1px solid #d4ded4; border-radius:30px; padding:13px 18px; outline-color:var(--green); }
+.no-results { grid-column:1/-1; padding:20px; text-align:center; color:#718077; }
+
+.about-grid { display:grid; grid-template-columns:1fr 1fr; align-items:center; gap:35px; }
+.about-grid img { height:330px; border-radius:14px; }
+.about-grid h2 { font-size:30px; color:var(--green); margin-bottom:13px; }
+.about-grid p { color:#66736a; margin-bottom:12px; }
+.benefits { display:flex; flex-wrap:wrap; gap:9px; margin:17px 0; }
+.benefits span { background:#edf4eb; color:var(--green); padding:8px 11px; border-radius:7px; font-size:13px; }
+
+.contact-section { background:var(--cream); }
+.contact-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+.contact-card { padding:25px; background:white; border:1px solid #e7e8df; border-radius:12px; }
+.contact-card h3 { color:var(--green); margin:8px 0; }
+.contact-card p { font-size:14px; color:#738076; margin-bottom:12px; }
+.contact-card a { color:var(--green); font-weight:600; overflow-wrap:anywhere; }
+
+footer { background:var(--dark); color:white; padding:42px 0 17px; }
+.footer-grid { display:grid; grid-template-columns:1.3fr 1fr 1fr 1fr; gap:25px; }
+footer h3 { color:var(--gold); margin-bottom:12px; }
+footer p,footer a { display:block; color:#d1dfd6; font-size:13px; margin:6px 0; }
+footer a:hover { color:var(--gold); }
+.copyright { border-top:1px solid #ffffff22; text-align:center; margin-top:27px; padding-top:17px; font-size:12px; color:#cbd8cf; }
+
+/* Shopping cart drawer */
+.cart-overlay { position:fixed; inset:0; background:#0007; z-index:39; display:none; }
+.cart-overlay.open { display:block; }
+.cart-panel {
+  position:fixed; right:0; top:0; bottom:0; z-index:40;
+  width:min(440px,100%); background:white; padding:22px;
+  overflow:auto; transform:translateX(105%); transition:.25s;
+  box-shadow:-10px 0 30px #0002;
+}
+.cart-panel.open { transform:translateX(0); }
+.cart-top { display:flex; justify-content:space-between; align-items:center; margin-bottom:18px; }
+.cart-top h2 { color:var(--green); }
+.close-btn { border:0; background:#edf1eb; border-radius:50%; width:35px; height:35px; font-size:21px; }
+.cart-item { display:grid; grid-template-columns:1fr auto; gap:10px; border-bottom:1px solid #e7eae3; padding:13px 0; }
+.cart-item h4 { font-size:15px; }
+.cart-item small { color:#738076; }
+.quantity { display:flex; align-items:center; gap:9px; margin-top:8px; }
+.quantity button { border:1px solid #d8e0d7; background:#f6f8f4; width:28px; height:28px; border-radius:5px; }
+.remove-btn { color:#b13b34; border:0; background:transparent; font-size:12px; margin-top:5px; }
+.cart-empty { text-align:center; padding:40px 5px; color:#718077; }
+.cart-form { display:grid; gap:10px; margin-top:20px; }
+.cart-form label { font-size:13px; font-weight:600; }
+.cart-form input,.cart-form textarea { width:100%; border:1px solid #d5ded4; padding:10px; border-radius:7px; }
+.cart-total { display:flex; justify-content:space-between; font-weight:700; color:var(--green); padding:15px 0; border-top:1px solid #e3e8e1; margin-top:12px; }
+.checkout { width:100%; border:0; background:#168747; color:white; padding:13px; border-radius:8px; font-weight:600; }
+.checkout:disabled { opacity:.5; cursor:not-allowed; }
+.whatsapp-float { position:fixed; right:18px; bottom:18px; z-index:15; background:#20b85a; color:white; border-radius:50%; width:54px; height:54px; display:grid; place-items:center; font-size:26px; box-shadow:0 5px 16px #0003; }
+
+@media(max-width:1000px) {
+  nav { gap:10px; }
+  nav a { font-size:12px; }
+  .product-grid { grid-template-columns:repeat(4,minmax(0,1fr)); }
+  .category-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+}
+@media(max-width:720px) {
+  .nav { min-height:68px; }
+  .brand-name { font-size:17px; }
+  .brand-mark { font-size:33px; }
+  .menu-button { display:inline-block; }
+  nav { display:none; position:absolute; top:100%; left:0; right:0; background:var(--dark); padding:10px 5%; align-items:stretch; }
+  nav.open { display:flex; flex-direction:column; }
+  nav a { padding:9px 0; font-size:14px; border-bottom:1px solid #ffffff16; }
+  .hero { min-height:440px; background-position:58% center; background-image:linear-gradient(90deg,#fbf6e9f5,#fbf6e9d9 68%,#fbf6e970),url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1000&q=80'); }
+  .hero-content { padding:50px 0; }
+  .hero h1 { font-size:43px; }
+  .hero h2 { font-size:19px; }
+  .section { padding:43px 0; }
+  .product-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; }
+  .product-card img { height:145px; }
+  .category-card img { height:135px; }
+  .about-grid,.contact-grid { grid-template-columns:1fr; }
+  .about-grid img { height:240px; }
+  .footer-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:22px 14px; }
+  .shop-heading h3 { font-size:19px; }
+}
+@media(max-width:370px) {
+  .category-grid { grid-template-columns:1fr; }
+  .brand-name { font-size:15px; }
+}
+</style>
+</head>
+
+<body>
+<header>
+  <div class="container nav">
+    <a class="brand" href="#home">
+      <span class="brand-mark">IH</span>
+      <span>
+        <span class="brand-name">Al Ihda Collection</span><br>
+        <small>QUALITY · TRUST · ELEGANCE</small>
+      </span>
+    </a>
+
+    <nav id="navMenu">
+      <a href="#home" onclick="closeMenu()">হোম</a>
+      <a href="#women" onclick="closeMenu()">নারীদের ফ্যাশন</a>
+      <a href="#men" onclick="closeMenu()">পুরুষদের ফ্যাশন</a>
+      <a href="#attar" onclick="closeMenu()">আতর ও পারফিউম</a>
+      <a href="#food" onclick="closeMenu()">ড্রাই ফুড</a>
+    </nav>
+
+    <div class="nav-right">
+      <button class="nav-button" onclick="document.getElementById('search').focus()" aria-label="Search">⌕</button>
+      <button class="nav-button" onclick="openCart()" aria-label="Shopping cart">🛒 <span class="count" id="cartCount">0</span></button>
+      <button class="nav-button menu-button" onclick="document.getElementById('navMenu').classList.toggle('open')" aria-label="Menu">☰</button>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="container">
+    <div class="hero-content">
+      <div class="eyebrow">WELCOME TO OUR COLLECTION</div>
+      <h1>Al Ihda<br><span>Collection</span></h1>
+      <h2>রুচিশীল জীবনের বিশ্বস্ত সংগ্রহ</h2>
+      <p>ফ্যাশন থেকে সুগন্ধি, মধু ও স্বাস্থ্যকর শুকনা খাবার—আপনার পছন্দের পণ্য এক ঠিকানায়।</p>
+      <a class="btn" href="#collections">কেনাকাটা শুরু করুন →</a>
+      <a class="btn btn-gold" href="#about">আমাদের সম্পর্কে</a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="collections">
+  <div class="container">
+    <div class="section-title">
+      <h2>আমাদের চারটি সংগ্রহ</h2>
+      <p>আপনার পছন্দের বিভাগ বেছে নিন</p>
+    </div>
+    <div class="category-grid">
+      <a class="category-card" href="#women">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=600&q=80" alt="নারীদের ফ্যাশন">
+        <div class="category-info"><h3>নারীদের ফ্যাশন</h3><p>থ্রি-পিস, স্কার্ফ, টুপি ও ফ্যাশন সামগ্রী</p><span class="btn">সংগ্রহ দেখুন →</span></div>
+      </a>
+      <a class="category-card" href="#men">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1617137968427-85924c800a22?auto=format&fit=crop&w=600&q=80" alt="পুরুষদের ফ্যাশন">
+        <div class="category-info"><h3>পুরুষদের ফ্যাশন</h3><p>পাঞ্জাবি, জুব্বা, পায়জামা ও কোট</p><span class="btn">সংগ্রহ দেখুন →</span></div>
+      </a>
+      <a class="category-card" href="#attar">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=600&q=80" alt="আতর ও পারফিউম">
+        <div class="category-info"><h3>আতর ও পারফিউম</h3><p>মনোমুগ্ধকর সুগন্ধির সংগ্রহ</p><span class="btn">সংগ্রহ দেখুন →</span></div>
+      </a>
+      <a class="category-card" href="#food">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1505576399271-565b52d4ac71?auto=format&fit=crop&w=600&q=80" alt="শুকনা খাবার">
+        <div class="category-info"><h3>ড্রাই ফুড</h3><p>মধু, বাদাম, বীজ ও শুকনা খাবার</p><span class="btn">সংগ্রহ দেখুন →</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section shop-section" id="shop">
+  <div class="container">
+    <div class="section-title">
+      <h2>পছন্দের পণ্য বেছে নিন</h2>
+      <p>একাধিক পণ্য কার্টে যোগ করে একসঙ্গে অর্ডার করুন</p>
+    </div>
+    <input id="search" class="search" type="search" placeholder="পণ্যের নাম লিখে খুঁজুন..." aria-label="পণ্য খুঁজুন">
+    <div id="productSections"></div>
+  </div>
+</section>
+
+<section class="section" id="about">
+  <div class="container about-grid">
+    <img loading="lazy" src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1000&q=80" alt="Al Ihda Collection শপিং">
+    <div>
+      <div class="eyebrow">ABOUT OUR BRAND</div>
+      <h2>Al Ihda Collection সম্পর্কে</h2>
+      <p>Al Ihda Collection-এ রয়েছে ফ্যাশন, আতর ও পারফিউম এবং বাছাই করা শুকনা খাবারের সংগ্রহ।</p>
+      <p>আমাদের লক্ষ্য হলো সুন্দর পণ্য নির্বাচন, সহজ অর্ডার এবং ক্রেতাদের সঙ্গে সরাসরি যোগাযোগের সুবিধা তৈরি করা।</p>
+      <div class="benefits">
+        <span>✓ চারটি পণ্য বিভাগ</span>
+        <span>✓ সহজ শপিং কার্ট</span>
+        <span>✓ WhatsApp অর্ডার</span>
+      </div>
+      <a href="#collections" class="btn">পণ্য দেখুন →</a>
+    </div>
+  </div>
+</section>
+
+<section class="section contact-section" id="contact">
+  <div class="container">
+    <div class="section-title">
+      <h2>যোগাযোগ ও সহায়তা</h2>
+      <p>পণ্যের তথ্য, অর্ডার অথবা সহায়তার জন্য যোগাযোগ করুন</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <div style="font-size:30px">☎</div>
+        <h3>ফোন ও WhatsApp</h3>
+        <p>আমাদের সঙ্গে সরাসরি যোগাযোগ করুন।</p>
+        <a href="https://wa.me/8801410544594" target="_blank" rel="noopener">01410544594</a>
+      </div>
+      <div class="contact-card">
+        <div style="font-size:30px">ⓕ</div>
+        <h3>Facebook পেজ</h3>
+        <p>Al Ihda Natural Food</p>
+        <a href="https://www.facebook.com/search/top?q=Al%20Ihda%20Natural%20Food" target="_blank" rel="noopener">Facebook-এ খুঁজুন →</a>
+        <p style="margin-top:8px">এটি সার্চ লিংক; আসল পেজ URL বসালে সরাসরি পেজ খুলবে।</p>
+      </div>
+      <div class="contact-card">
+        <div style="font-size:30px">🎧</div>
+        <h3>হেল্প ও সাপোর্ট</h3>
+        <p>অর্ডার বা পণ্য সম্পর্কে কোনো প্রশ্ন থাকলে আমাদের জানান।</p>
+        <a href="https://wa.me/8801410544594?text=আসসালামু%20আলাইকুম%2C%20আমার%20সাহায্য%20প্রয়োজন" target="_blank" rel="noopener">সাহায্য নিন →</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a class="brand" href="#home"><span class="brand-mark">IH</span><span><span class="brand-name">Al Ihda Collection</span><br><small>QUALITY · TRUST · ELEGANCE</small></span></a>
+        <p style="margin-top:14px">আপনার পছন্দের পণ্য, এক ঠিকানায়। আমাদের সঙ্গে থাকার জন্য ধন্যবাদ।</p>
+      </div>
+      <div>
+        <h3>দ্রুত লিংক</h3>
+        <a href="#home">হোম</a><a href="#women">নারীদের ফ্যাশন</a><a href="#men">পুরুষদের ফ্যাশন</a><a href="#attar">আতর ও পারফিউম</a><a href="#food">ড্রাই ফুড</a>
+      </div>
+      <div>
+        <h3>যোগাযোগ</h3>
+        <a href="https://wa.me/8801410544594">WhatsApp: 01410544594</a>
+        <a href="#contact">কাস্টমার সাপোর্ট</a>
+        <a href="#contact">Facebook: Al Ihda Natural Food</a>
+      </div>
+      <div>
+        <h3>হেল্প</h3>
+        <a href="#contact">অর্ডার সহায়তা</a>
+        <a href="#contact">পণ্য সম্পর্কে প্রশ্ন</a>
+        <a href="#contact">যোগাযোগের তথ্য</a>
+      </div>
+    </div>
+    <div class="copyright">© <span id="year"></span> Al Ihda Collection. সর্বস্বত্ব সংরক্ষিত।<br>Thank You For Your Support ♥</div>
+  </div>
+</footer>
+
+<div class="cart-overlay" id="cartOverlay" onclick="closeCart()"></div>
+<aside class="cart-panel" id="cartPanel" aria-label="Shopping cart">
+  <div class="cart-top">
+    <h2>🛒 আপনার কার্ট</h2>
+    <button class="close-btn" onclick="closeCart()" aria-label="Close">×</button>
+  </div>
+  <div id="cartItems"></div>
+  <div class="cart-form">
+    <h3>অর্ডারের তথ্য</h3>
+    <label for="customerName">আপনার নাম</label>
+    <input id="customerName" autocomplete="name" placeholder="সম্পূর্ণ নাম">
+    <label for="customerPhone">মোবাইল নম্বর</label>
+    <input id="customerPhone" type="tel" autocomplete="tel" placeholder="01XXXXXXXXX">
+    <label for="customerAddress">ডেলিভারি ঠিকানা</label>
+    <textarea id="customerAddress" rows="3" autocomplete="street-address" placeholder="আপনার সম্পূর্ণ ঠিকানা"></textarea>
+    <label for="customerNote">অতিরিক্ত নির্দেশনা (ঐচ্ছিক)</label>
+    <textarea id="customerNote" rows="2" placeholder="সাইজ, রং বা অন্য তথ্য"></textarea>
+  </div>
+  <div class="cart-total"><span>মোট পণ্য</span><span id="totalQty">0টি</span></div>
+  <div class="cart-total"><span>পণ্যের মূল্য</span><span id="totalPrice">দাম নিশ্চিত করুন</span></div>
+  <p style="font-size:12px;color:#778176;margin-bottom:12px">পণ্যের দাম ও ডেলিভারি চার্জ WhatsApp-এ নিশ্চিত করা হবে।</p>
+  <button class="checkout" id="checkoutBtn" onclick="checkout()">WhatsApp-এ অর্ডার পাঠান →</button>
+</aside>
+
+<a class="whatsapp-float" href="https://wa.me/8801410544594" target="_blank" rel="noopener" aria-label="WhatsApp">☏</a>
+
+<script>
+// এখানে পণ্যের নাম, বিবরণ, ছবি ও দাম পরিবর্তন করা যাবে।
+// দাম 0 থাকলে পণ্যের দাম WhatsApp-এ নিশ্চিত করতে হবে।
+
+const groups = [
+  {
+    id:'women', title:'নারীদের ফ্যাশন', category:'নারীদের ফ্যাশন',
+    products:[
+      ['থ্রি-পিস','নারীদের পোশাক','photo-1483985988355-763728e1935b',444],
+      ['ফুল স্লিভ পোশাক','আরামদায়ক ফ্যাশন','photo-1485230895905-ec40ba36b9bc',900],
+      ['স্কার্ফ','বিভিন্ন ডিজাইনের স্কার্ফ','photo-1529139574466-a303027c1d8b',450],
+      ['হিজাব','শালীন ফ্যাশন','photo-1483985988355-763728e1935b',0],
+      ['সানগ্লাস','স্টাইলিশ সানগ্লাস','photo-1511499767150-a48a237f0083',800],
+      ['নারীদের টুপি','ফ্যাশনেবল হেডওয়্যার','photo-1521369909029-2afed882baee',555],
+      ['শাল','বিভিন্ন রঙের শাল','photo-1601924994987-69e26d50dc26',130],
+      ['হ্যান্ডব্যাগ','দৈনন্দিন ব্যবহারের ব্যাগ','photo-1548036328-c9fa89d128fa',540],
+      ['ঘড়ি','ফ্যাশন ঘড়ি','photo-1523275335684-37898b6baf30',600],
+      ['ফ্যাশন অ্যাক্সেসরিজ','বিভিন্ন সাজসজ্জার পণ্য','photo-1490481651871-ab68de25d43d',49]
+    ]
+  },
+  {
+    id:'men', title:'পুরুষদের ফ্যাশন', category:'পুরুষদের ফ্যাশন',
+    products:[
+      ['জুব্বা','পুরুষদের ঐতিহ্যবাহী পোশাক','photo-1617137968427-85924c800a22',990],
+      ['পাঞ্জাবি','বিশেষ উপলক্ষের পোশাক','photo-1618354691373-d851c5c3a990',990],
+      ['পায়জামা','আরামদায়ক পোশাক','photo-1598033129183-c4f50c736f10',9900],
+      ['কোট','ফরমাল ও স্টাইলিশ কোট','photo-1591047139829-d91aecb6caea',0],
+      ['মুজিব কোট','বিশেষ ডিজাইনের কোট','photo-1592878904946-b3cd8ae243d0',990],
+      ['শার্ট','ক্যাজুয়াল শার্ট','photo-1596755094514-f87e34085b2c',990],
+      ['প্যান্ট','দৈনন্দিন ব্যবহারের প্যান্ট','photo-1473966968600-fa801b869a1a',444],
+      ['টুপি','বিভিন্ন ডিজাইনের টুপি','photo-1521369909029-2afed882baee',345],
+      ['মোজা','দৈনন্দিন ব্যবহারের মোজা','photo-1586350977771-b3b0abd50c82',234],
+      ['কাপড়ের পিস','পোশাক তৈরির কাপড়','photo-1523381210434-271e8be1f52b',444]
+    ]
+  },
+  {
+    id:'attar', title:'আতর ও পারফিউম', category:'আতর ও পারফিউম',
+    products:[
+      ['প্রিমিয়াম আতর','সুগন্ধির সংগ্রহ','photo-1594035910387-fea47794261f',545],
+      ['আরবি আতর','মনোমুগ্ধকর সুগন্ধি','photo-1608571423902-eed4a5ad8108',944],
+      ['উড আতর','উড নোটের সুগন্ধি','photo-1615634260167-c8cdede054de',599],
+      ['পারফিউম','দৈনন্দিন ব্যবহারের সুগন্ধি','photo-1541643600914-78b084683601',888],
+      ['পুরুষদের পারফিউম','পুরুষদের সুগন্ধি','photo-1592945403244-b3fbafd7f539',908],
+      ['নারীদের পারফিউম','নারীদের সুগন্ধি','photo-1594035910387-fea47794261f',765],
+      ['মাস্ক আতর','মিষ্টি সুগন্ধির সংগ্রহ','photo-1615634260167-c8cdede054de',675],
+      ['পারফিউম গিফট সেট','উপহারের জন্য','photo-1549465220-1a8b9238cd48',754],
+      ['ট্রাভেল পারফিউম','সহজে বহনযোগ্য','photo-1592945403244-b3fbafd7f539',485],
+      ['বিশেষ সুগন্ধি','বাছাই করা সুগন্ধি','photo-1608571423902-eed4a5ad8108',444]
+    ]
+  },
+  {
+    id:'food', title:'ড্রাই ফুড', category:'ড্রাই ফুড',
+    products:[
+      ['প্রাকৃতিক মধু','মধুর ধরন ও পরিমাণ জেনে নিন','photo-1587049352846-4a222e784d38',600],
+      ['কাঠবাদাম','বাদামের সংগ্রহ','photo-1508061253366-f7da158b6d46',685],
+      ['কাজুবাদাম','কাজুবাদামের প্যাকেট','photo-1505576399271-565b52d4ac71',780],
+      ['পেস্তা বাদাম','বাছাই করা বাদাম','photo-1508061253366-f7da158b6d46',900],
+      ['খেজুর','বিভিন্ন ধরনের খেজুর','photo-1568051243858-533a6078090e',987],
+      ['কুমড়ার বীজ','শুকনা বীজের সংগ্রহ','photo-1518843875459-f738682238a6',459],
+      ['কালোজিরা','কালোজিরার প্যাকেট','photo-1603903631889-b5f3ba8f6c4d',680],
+      ['কিশমিশ','শুকনা ফল','photo-1596591606975-97ee5cef3a1e',340],
+      ['আখরোট','বিভিন্ন বাদাম','photo-1505576399271-565b52d4ac71',200],
+      ['মিক্সড ড্রাই ফ্রুট','মিশ্র শুকনা খাবার','photo-1505576399271-565b52d4ac71',560]
+    ]
+  }
+];
+
+let cart = {};
+let activeSearch = '';
+
+function escapeHTML(value) {
+  return String(value).replace(/[&<>"']/g, char => ({
+    '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;'
+  }[char]));
+}
+
+function getProducts() {
+  return groups.flatMap(group => group.products.map((p,index) => ({
+    id:group.id+'-'+index,
+    groupId:group.id,
+    category:group.category,
+    name:p[0], description:p[1], image:p[2], price:p[3]
+  })));
+}
+
+const allProducts = getProducts();
+
+function renderProducts() {
+  const root = document.getElementById('productSections');
+  const q = activeSearch.trim().toLowerCase();
+
+  root.innerHTML = groups.map(group => {
+    const items = allProducts.filter(p =>
+      p.groupId === group.id &&
+      (p.name+' '+p.description+' '+p.category).toLowerCase().includes(q)
+    );
+
+    if (!items.length) return '';
+
+    return `
+      <section class="shop-category" id="${group.id}">
+        <div class="shop-heading">
+          <h3>${group.title}</h3>
+          <span>${items.length}টি পণ্য</span>
+        </div>
+        <div class="product-grid">
+          ${items.map(p => `
+            <article class="product-card">
+              <img loading="lazy"
+                src="https://images.unsplash.com/${encodeURIComponent(p.image)}?auto=format&fit=crop&w=500&q=75"
+                alt="${escapeHTML(p.name)}"
+                onerror="this.onerror=null;this.src='https://placehold.co/500x400/f5f0e5/064737?text=Al+Ihda+Collection'">
+              <div class="product-info">
+                <h4>${escapeHTML(p.name)}</h4>
+                <p>${escapeHTML(p.description)}</p>
+                <div class="product-price">${p.price > 0 ? '৳'+p.price : 'দাম জানতে যোগাযোগ করুন'}</div>
+                <button class="add-btn" onclick="addToCart('${p.id}')">＋ কার্টে যোগ করুন</button>
+              </div>
+            </article>
+          `).join('')}
+        </div>
+      </section>`;
+  }).join('');
+
+  if (!root.innerHTML.trim()) {
+    root.innerHTML = '<div class="no-results">কোনো পণ্য পাওয়া যায়নি। অন্য নামে খুঁজুন।</div>';
+  }
+}
+
+function addToCart(id) {
+  const p = allProducts.find(x => x.id === id);
+  if (!p) return;
+  if (cart[id]) cart[id].qty++;
+  else cart[id] = {...p,qty:1};
+  updateCart();
+}
+
+function changeQty(id, delta) {
+  if (!cart[id]) return;
+  cart[id].qty += delta;
+  if (cart[id].qty <= 0) delete cart[id];
+  updateCart();
+}
+
+function removeItem(id) {
+  delete cart[id];
+  updateCart();
+}
+
+function updateCart() {
+  const items = Object.values(cart);
+  const count = items.reduce((sum,p) => sum+p.qty,0);
+  document.getElementById('cartCount').textContent = count;
+  document.getElementById('totalQty').textContent = count+'টি';
+
+  const knownTotal = items.every(p => p.price > 0);
+  const total = items.reduce((sum,p) => sum+p.price*p.qty,0);
+  document.getElementById('totalPrice').textContent =
+    items.length && knownTotal ? '৳'+total.toLocaleString('en-BD') : 'WhatsApp-এ নিশ্চিত করুন';
+
+  document.getElementById('cartItems').innerHTML = items.length ? items.map(p => `
+    <div class="cart-item">
+      <div>
+        <h4>${escapeHTML(p.name)}</h4>
+        <small>${p.price > 0 ? '৳'+p.price+' / পিস' : 'দাম জানতে যোগাযোগ করুন'}</small>
+        <div class="quantity">
+          <button onclick="changeQty('${p.id}',-1)" aria-label="পরিমাণ কমান">−</button>
+          <span>${p.qty}</span>
+          <button onclick="changeQty('${p.id}',1)" aria-label="পরিমাণ বাড়ান">+</button>
+        </div>
+        <button class="remove-btn" onclick="removeItem('${p.id}')">পণ্য বাদ দিন</button>
+      </div>
+      <strong>${p.price > 0 ? '৳'+(p.price*p.qty).toLocaleString('en-BD') : 'দাম নিশ্চিত করুন'}</strong>
+    </div>
+  `).join('') : '<div class="cart-empty">🛒<br><br>আপনার কার্ট এখন খালি।<br>পছন্দের পণ্য যোগ করুন।</div>';
+
+  document.getElementById('checkoutBtn').disabled = !items.length;
+}
+
+function openCart() {
+  document.getElementById('cartPanel').classList.add('open');
+  document.getElementById('cartOverlay').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeCart() {
+  document.getElementById('cartPanel').classList.remove('open');
+  document.getElementById('cartOverlay').classList.remove('open');
+  document.body.style.overflow='';
+}
+function closeMenu() {
+  document.getElementById('navMenu').classList.remove('open');
+}
+
+function checkout() {
+  const items = Object.values(cart);
+  if (!items.length) return;
+
+  const name = document.getElementById('customerName').value.trim();
+  const phone = document.getElementById('customerPhone').value.trim();
+  const address = document.getElementById('customerAddress').value.trim();
+  const note = document.getElementById('customerNote').value.trim();
+
+  if (!name || !phone || !address) {
+    alert('অর্ডার পাঠানোর আগে আপনার নাম, মোবাইল নম্বর এবং ঠিকানা লিখুন।');
+    return;
+  }
+
+  const lines = items.map((p,i) =>
+    `${i+1}. ${p.name} — পরিমাণ: ${p.qty} — ${p.price > 0 ? '৳'+(p.price*p.qty) : 'দাম নিশ্চিত করতে হবে'}`
+  );
+  const allPriced = items.every(p => p.price > 0);
+  const total = items.reduce((sum,p) => sum+p.price*p.qty,0);
+
+  const message = [
+    'আসসালামু আলাইকুম, Al Ihda Collection-এ নতুন অর্ডার দিতে চাই।',
+    '',
+    'গ্রাহকের নাম: '+name,
+    'মোবাইল নম্বর: '+phone,
+    'ডেলিভারি ঠিকানা: '+address,
+    '',
+    'অর্ডারের তালিকা:',
+    ...lines,
+    '',
+    'মোট পণ্য: '+items.reduce((sum,p)=>sum+p.qty,0)+'টি',
+    'পণ্যের মোট মূল্য: '+(allPriced ? '৳'+total : 'WhatsApp-এ নিশ্চিত করতে হবে'),
+    'অতিরিক্ত নির্দেশনা: '+(note || 'নেই'),
+    '',
+    'অনুগ্রহ করে অর্ডার ও ডেলিভারি চার্জ নিশ্চিত করুন।'
+  ].join('\n');
+
+  // বাংলাদেশের WhatsApp নম্বর: 880 + 01410544594-এর শুরুর 0 বাদ
+  const whatsappNumber = '8801410544594';
+  const url = 'https://wa.me/'+whatsappNumber+'?text='+encodeURIComponent(message);
+  window.open(url,'_blank','noopener');
+}
+
+document.getElementById('search').addEventListener('input', e => {
+  activeSearch = e.target.value;
+  renderProducts();
+});
+
+document.getElementById('year').textContent = new Date().getFullYear();
+renderProducts();
+updateCart();
+</script>
+</body>
+</html>
+
+</body>
+</html>
